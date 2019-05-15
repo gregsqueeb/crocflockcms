@@ -1,48 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import BlogRoll from '../components/BlogRoll'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
+  featuredimage,
   title,
   helmet,
+  price,
+  presale,
+  gumroadlink,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+    <div>
+      <div className="main-product">
+        {helmet || ''}
+        <div className="top-container">
+        <PreviewCompatibleImage
+                    className="product-image"
+                    imageInfo={{
+                      image: featuredimage,
+                      alt: `featured image thumbnail for post ${
+                        title
+                      }`,
+                    }}
+                  />
+          <div className="product-overview">
+            <h1 className="product-name">{title}</h1>
+            <h2 className="product-price">${price}</h2>
+            <p className="product-description">{description}</p>
+            <a className="button" href={gumroadlink}>PRE ORDER</a>
+            <p className="time-countdown"><span id="time">5:00</span> time left to buy</p>
           </div>
         </div>
+        <div className="product-details">
+          <h3 className="details-header">product details</h3>
+          <PostContent content={content} />
+        </div>
       </div>
-    </section>
+      <BlogRoll />
+    </div>
   )
 }
 
@@ -50,6 +56,9 @@ ProductTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  gumroadlink: PropTypes.string,
+  price: PropTypes.number,
+  featuredimage: PropTypes.object,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -63,6 +72,9 @@ const Product = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        gumroadlink={post.frontmatter.gumroadlink}
+        price={post.frontmatter.price}
+        featuredimage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -70,9 +82,14 @@ const Product = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
+            <script>
+              {/* Start the timer when they change the page */}
+              var fiveMinutes = 60 * 5,
+              display = document.querySelector('#time');
+              startTimer(fiveMinutes, display);
+            </script>
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Layout>
@@ -96,7 +113,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
+        gumroadlink
+        price
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 360, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

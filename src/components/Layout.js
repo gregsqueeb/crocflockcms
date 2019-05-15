@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
         <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet" />
         <script src="https://gumroad.com/js/gumroad.js" />
-        <script src="./countdown.js" />
+        <script src="/countdown.js" />
       </Helmet>
       <Navbar />
       <div>{children}</div>
