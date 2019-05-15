@@ -2,7 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
+import './all.scss'
+import './normalize.css'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -43,6 +44,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
+        <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet" />
+        <script src="https://gumroad.com/js/gumroad.js" />
+        <script src="./countdown.js" />
       </Helmet>
       <Navbar />
       <div>{children}</div>
