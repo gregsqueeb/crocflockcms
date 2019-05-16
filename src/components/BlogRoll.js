@@ -22,6 +22,11 @@ class BlogRoll extends React.Component {
                       alt: `featured image thumbnail for post ${
                         product.title
                       }`,
+                      bgImage: true,
+                      style: {
+                        backgroundSize: "contain",
+                        height: 300
+                      }
                     }}
                   />
                 </div>

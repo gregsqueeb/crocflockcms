@@ -2,7 +2,7 @@ h1, h2, h3 {
     font-weight: normal;
 }
 p {
-    font-size: 24px;
+    font-size: 20px;
 }
 .logo {
     text-align: center;
@@ -99,11 +99,12 @@ p {
     margin: 0;
     letter-spacing: 1px;
 }
-.detail-list {
+.detail-list, ul {
     padding-left: 18px;
 }
-.detail-item {
+.detail-item, li {
     margin-bottom: 4px;
+    font-size: 20px;
 }
 .additional-products-list {
     padding: 0;
@@ -188,11 +189,11 @@ p {
     .product-details {
         max-width: 540px;
     }
-    .detail-list {
+    .detail-list, ul {
         display: flex;
         flex-wrap: wrap;
     }
-    .detail-item {
+    .detail-item, li {
         flex-basis: 260px;
         flex-shrink: 0;
     }

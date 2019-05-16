@@ -20,6 +20,13 @@ export const ProductTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
+  let button;
+  if (presale) {
+    button = <a className="button" href={gumroadlink}>Pre Order</a>
+  } else {
+    button = <a className="button" href={gumroadlink}>Buy Now</a>
+  }
+
   return (
     <div>
       <div className="main-product">
@@ -40,7 +47,7 @@ export const ProductTemplate = ({
             <h1 className="product-name">{title}</h1>
             <h2 className="product-price">${price}</h2>
             <p className="product-description">{description}</p>
-            <a className="button" href={gumroadlink}>PRE ORDER</a>
+            {button}
             <p className="time-countdown"><span id="time">5:00</span> time left to buy</p>
           </div>
         </div>

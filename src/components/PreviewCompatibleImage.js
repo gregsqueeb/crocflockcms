@@ -1,10 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import BgImg from 'gatsby-background-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = {  }
-  const { alt = '', childImageSharp, image } = imageInfo
+  const imageStyle = { 
+   }
+  const { alt = '', childImageSharp, image, bgImage, style } = imageInfo
+  if(bgImage) {
+    return (
+      <BgImg style={style} fluid={image.childImageSharp.fluid} alt={alt} />
+    )
+  }
 
   if (!!image && !!image.childImageSharp) {
     return (
@@ -28,6 +35,7 @@ PreviewCompatibleImage.propTypes = {
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     style: PropTypes.object,
+    bgImage: PropTypes.boolean,
   }).isRequired,
 }
 
