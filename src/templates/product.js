@@ -25,15 +25,17 @@ export const ProductTemplate = ({
       <div className="main-product">
         {helmet || ''}
         <div className="top-container">
-        <PreviewCompatibleImage
-                    className="product-image"
-                    imageInfo={{
-                      image: featuredimage,
-                      alt: `featured image thumbnail for post ${
-                        title
-                      }`,
-                    }}
-                  />
+        <div className="product-image">
+          <PreviewCompatibleImage
+                      className="product-image"
+                      imageInfo={{
+                        image: featuredimage,
+                        alt: `featured image thumbnail for post ${
+                          title
+                        }`,
+                      }}
+                    />
+          </div>
           <div className="product-overview">
             <h1 className="product-name">{title}</h1>
             <h2 className="product-price">${price}</h2>
@@ -47,7 +49,7 @@ export const ProductTemplate = ({
           <PostContent content={content} />
         </div>
       </div>
-      <BlogRoll />
+      <BlogRoll/>
     </div>
   )
 }
