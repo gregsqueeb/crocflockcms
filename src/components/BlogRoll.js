@@ -15,7 +15,6 @@ class BlogRoll extends React.Component {
     } else {
       products = allproducts
     }
-    console.log(this.props)
     return (
       <ul className="additional-products-list">
         {products &&
@@ -62,8 +61,6 @@ BlogRoll.propTypes = {
 
 export default ({exclude}) => {
 
-  console.log(exclude)
-
   const excludeId = exclude
   return (
   <StaticQuery
@@ -98,8 +95,7 @@ export default ({exclude}) => {
       }
     `}
     exclude={excludeId}
-    render={(data, count, excludeId) => {
-      console.log(excludeId)
+    render={(data, count) => {
       return(
       <BlogRoll data={data} count={count} exclude={exclude} />
       )
