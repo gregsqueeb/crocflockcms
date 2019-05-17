@@ -5,9 +5,17 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: products } = data.allMarkdownRemark
-
+    const { data, exclude } = this.props
+    const { edges: allproducts } = data.allMarkdownRemark
+    let products;
+    if(exclude) {
+      products = allproducts.filter((product, index, array ) => {
+        return exclude !== product.node.id;
+      })
+    } else {
+      products = allproducts
+    }
+    console.log(this.props)
     return (
       <ul className="additional-products-list">
         {products &&
@@ -49,9 +57,15 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
+  exclude: PropTypes.string,
 }
 
-export default () => (
+export default ({exclude}) => {
+
+  console.log(exclude)
+
+  const excludeId = exclude
+  return (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -83,6 +97,12 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    exclude={excludeId}
+    render={(data, count, excludeId) => {
+      console.log(excludeId)
+      return(
+      <BlogRoll data={data} count={count} exclude={exclude} />
+      )
+    }}
   />
-)
+)}

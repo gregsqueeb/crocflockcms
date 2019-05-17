@@ -17,6 +17,7 @@ export const ProductTemplate = ({
   price,
   presale,
   gumroadlink,
+  id,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -25,8 +26,7 @@ export const ProductTemplate = ({
     button = <a className="button" href={gumroadlink}>Pre Order</a>
   } else {
     button = <a className="button" href={gumroadlink}>Buy Now</a>
-  }
-
+  } 
   return (
     <div>
       <div className="main-product">
@@ -56,7 +56,7 @@ export const ProductTemplate = ({
           <PostContent content={content} />
         </div>
       </div>
-      <BlogRoll/>
+      <BlogRoll exclude={id}/>
     </div>
   )
 }
@@ -70,6 +70,7 @@ ProductTemplate.propTypes = {
   featuredimage: PropTypes.object,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  id: PropTypes.string,
 }
 
 const Product = ({ data }) => {
@@ -84,6 +85,7 @@ const Product = ({ data }) => {
         gumroadlink={post.frontmatter.gumroadlink}
         price={post.frontmatter.price}
         featuredimage={post.frontmatter.featuredimage}
+        id={post.id}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
