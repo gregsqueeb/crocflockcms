@@ -11,6 +11,8 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
+  link,
+  buttontext,
 }) => (
   <div>
     <div
@@ -55,6 +57,7 @@ export const IndexPageTemplate = ({
           }}
         >
           {title}
+          <Link className="button" to={link}>{buttontext}</Link>
         </h1>
       </div>
     </div>
@@ -92,6 +95,8 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
+        buttontext={frontmatter.buttontext}
+        link={frontmatter.link}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
@@ -124,6 +129,8 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        link
+        buttontext
       }
     }
   }

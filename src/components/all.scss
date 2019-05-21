@@ -1,8 +1,11 @@
 h1, h2, h3 {
     font-weight: normal;
 }
-p {
-    font-size: 20px;
+p, label {
+    font-size: 24px;
+}
+.text-center {
+    text-align: center;
 }
 .logo {
     text-align: center;

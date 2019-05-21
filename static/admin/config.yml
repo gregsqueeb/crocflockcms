@@ -34,6 +34,8 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: Button Text, name: buttontext, widget: string}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

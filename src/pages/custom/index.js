@@ -39,15 +39,17 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
-              <form
+              <h1 className="all-charms-header">Custom Charms</h1>
+              <div className="contact-form">
+                <form
                 name="contact"
                 method="post"
-                action="/contact/thanks/"
+                action="/custom/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
+                <p>We can collaborate with you to create your own custom croc charm. We specialize in everything from designing the charm, to managing the shipping/logistics. We have a couple additional services like creating custom backs for your croc charms to set you apart from others out there.</p>
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
@@ -87,6 +89,21 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
+                  <label className="label" htmlFor={'name'}>
+                    Your website/instagram
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'instagram'}
+                      onChange={this.handleChange}
+                      id={'instagram'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
                   <label className="label" htmlFor={'message'}>
                     Message
                   </label>
@@ -106,6 +123,7 @@ export default class Index extends React.Component {
                   </button>
                 </div>
               </form>
+              </div>
             </div>
           </div>
         </section>
