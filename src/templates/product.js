@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Countdown from 'react-countdown-now';
+
 
 export const ProductTemplate = ({
   content,
@@ -27,6 +29,14 @@ export const ProductTemplate = ({
   } else {
     button = <a className="button" href={gumroadlink}>Buy Now</a>
   } 
+
+  const renderer = ({ minutes, seconds }) => {
+      if(seconds < 10){
+        seconds = "0"+seconds
+      }
+      return <span>{minutes}:{seconds}</span>;
+  };
+
   return (
     <div>
       <div className="main-product">
@@ -48,7 +58,7 @@ export const ProductTemplate = ({
             <h2 className="product-price">${price}</h2>
             <p className="product-description">{description}</p>
             {button}
-            <p className="time-countdown"><span id="time">5:00</span> time left to buy</p>
+            <p className="time-countdown"><span id="time"><Countdown zeroPadTime={2} date={Date.now() + (1000 * 60 * 5) } renderer={renderer} /></span> time left to buy</p>
           </div>
         </div>
         <div className="product-details">
