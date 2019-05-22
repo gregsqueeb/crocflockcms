@@ -58,7 +58,7 @@ export const IndexPageTemplate = ({
           >
             <span className="front-text">{title}</span>
             <span className="rear-text">{title}</span>
-            <Link className="button" to={link}>{buttontext}</Link>
+            {/* <Link className="button" to={link}>{buttontext}</Link> */}
           </h1>
           
         </div>

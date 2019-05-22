@@ -20,6 +20,7 @@ class BlogRoll extends React.Component {
         {products &&
           products.map(({ node: product }) => (
             <li className="additional-product" key={product.id}>
+            <Link to={product.fields.slug}>
             <div className="image-container">
                 {product.frontmatter.featuredimage ? (
                 <div className="additional-product-image">
@@ -39,8 +40,10 @@ class BlogRoll extends React.Component {
                 </div>
               ) : null}
             </div>
+            </Link>
             <div className="title-container">
                 <h2 className="addition-product-title">{product.frontmatter.title}</h2>
+                <h2 className="addition-product-price">${product.frontmatter.price}</h2>
                 <Link className="button" to={product.fields.slug}>Check it out</Link>
             </div>
           </li>
@@ -81,6 +84,7 @@ export default ({exclude}) => {
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                price
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
