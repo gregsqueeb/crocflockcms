@@ -15,7 +15,7 @@ export const IndexPageTemplate = ({
   buttontext,
 }) => (
   <div className="container">
-    <div>
+    <div className="hero-container">
       <div
         className="full-width-image hero margin-top-0"
         style={{
@@ -29,30 +29,43 @@ export const IndexPageTemplate = ({
         }}
       >
     </div>
-      <div
-        style={{
-          display: 'flex',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          justifyItems: 'center',
-          flexDirection: 'column',
-          flex: '1',
-          position: 'relative',
-        }}
-      >
-        <h1
-          className="shadow-text"
+      <div className="dashes-container">
+      <img className="dash vertical-top-left" src="./img/verticalstripe.svg" />
+      <img className="dash vertical-top-right" src="./img/verticalstripe.svg" />
+      <img className="dash horizontal-top-left" src="./img/horizontalstripe.svg" />
+      <img className="dash horizontal-top-right" src="./img/horizontalstripe.svg" />
+        <div
+          className="hero-text-container"
           style={{
-            color: 'black',
-            lineHeight: '55px',
-            fontSize: '40px',
+            display: 'flex',
+            lineHeight: '1',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            justifyItems: 'center',
+            flexDirection: 'column',
+            flex: '1',
+            position: 'relative',
           }}
         >
-          <span className="front-text">{title}</span>
-          <span className="rear-text">{title}</span>
-          <Link className="button" to={link}>{buttontext}</Link>
-        </h1>
+        
+          <h1
+            className="shadow-text"
+            style={{
+              color: 'black',
+              lineHeight: '55px',
+              fontSize: '40px',
+            }}
+          >
+            <span className="front-text">{title}</span>
+            <span className="rear-text">{title}</span>
+            <Link className="button" to={link}>{buttontext}</Link>
+          </h1>
+          
+        </div>
+        <img className="dash vertical-bottom-left" src="./img/verticalstripe.svg" />
+        <img className="dash vertical-bottom-right" src="./img/verticalstripe.svg" />
+        <img className="dash horizontal-bottom-left" src="./img/horizontalstripe.svg" />
+        <img className="dash horizontal-bottom-right" src="./img/horizontalstripe.svg" />
       </div>
     </div>
     <section className="section section--gradient">
