@@ -14,15 +14,10 @@ export const IndexPageTemplate = ({
   link,
   buttontext,
 }) => (
-  <div>
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'stretch',
-      }}>
+  <div className="container">
+    <div>
       <div
-        className="full-width-image margin-top-0"
+        className="full-width-image hero margin-top-0"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -30,7 +25,6 @@ export const IndexPageTemplate = ({
           backgroundPosition: `center center`,
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
-          height: `400px`,
           flex: '1',
         }}
       >
@@ -44,37 +38,25 @@ export const IndexPageTemplate = ({
           justifyItems: 'center',
           flexDirection: 'column',
           flex: '1',
+          position: 'relative',
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="shadow-text"
           style={{
             color: 'black',
-            lineHeight: '1',
-            padding: '24px',
-            fontSize: '80px',
-            marginBottom: '0',
+            lineHeight: '55px',
+            fontSize: '40px',
           }}
         >
-          {title}
+          <span className="front-text">{title}</span>
+          <span className="rear-text">{title}</span>
           <Link className="button" to={link}>{buttontext}</Link>
         </h1>
       </div>
     </div>
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="column is-12">
-                  <BlogRoll />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BlogRoll />
     </section>
   </div>
 )

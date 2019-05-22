@@ -1,5 +1,6 @@
 h1, h2, h3 {
     font-weight: normal;
+    margin: 0;
 }
 p, label {
     font-size: 24px;
@@ -8,8 +9,39 @@ p, label {
     text-align: center;
 }
 .logo {
-    text-align: center;
-    margin: 10px;
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.container {
+    padding: 0 40px;
+    @media only screen and (min-width : 840px) {
+        padding: 0 50px;
+    }
+}
+.hero {
+    height: 300px;
+    margin-right: -40px;
+}
+.shadow-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    color: #000000;
+    letter-spacing: 5.71px;
+}
+.front-text, .rear-text {
+    display: block;
+}
+.front-text {
+    position: absolute;
+}
+.rear-text {
+    position: absolute;
+    transform: translate(-2px, 6px);
+    color: transparent;
+    -webkit-text-stroke: 1px black;
 }
 .logo a, .logo a:visited, .logo a:hover {
     text-decoration: none;
@@ -142,6 +174,13 @@ p, label {
 .nav-link:hover {
     text-decoration: underline;
 }
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width : 840px) {
+        flex-direction: row;
+    }
+}
 .all-charms-header {
     margin: 0;
     font-size: 60px;
@@ -150,11 +189,32 @@ p, label {
 }
 .nav-item {
     display: inline-block;
+    text-align: right;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    @media only screen and (min-width : 840px) {
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 .nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    @media only screen and (min-width : 840px) {
+        padding: 100px 150px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 .contact-form {
     background: #F7F7F7;
@@ -233,10 +293,6 @@ p, label {
     }
     body {
         margin: 0 20px 20px;
-    }
-    .logo {
-        font-size: 50px;
-        margin: 10px 60px;
     }
     .all-charms-header {
         font-size: 120px;
