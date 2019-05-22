@@ -30,10 +30,10 @@ export const IndexPageTemplate = ({
       >
     </div>
       <div className="dashes-container">
-      <img className="dash vertical-top-left" src="./img/verticalstripe.svg" />
-      <img className="dash vertical-top-right" src="./img/verticalstripe.svg" />
-      <img className="dash horizontal-top-left" src="./img/horizontalstripe.svg" />
-      <img className="dash horizontal-top-right" src="./img/horizontalstripe.svg" />
+      <img className="dash vertical-top-left" src="/img/verticalstripe.svg" />
+      <img className="dash vertical-top-right" src="/img/verticalstripe.svg" />
+      <img className="dash horizontal-top-left" src="/img/horizontalstripe.svg" />
+      <img className="dash horizontal-top-right" src="/img/horizontalstripe.svg" />
         <div
           className="hero-text-container"
           style={{
@@ -62,10 +62,10 @@ export const IndexPageTemplate = ({
           </h1>
           
         </div>
-        <img className="dash vertical-bottom-left" src="./img/verticalstripe.svg" />
-        <img className="dash vertical-bottom-right" src="./img/verticalstripe.svg" />
-        <img className="dash horizontal-bottom-left" src="./img/horizontalstripe.svg" />
-        <img className="dash horizontal-bottom-right" src="./img/horizontalstripe.svg" />
+        <img className="dash vertical-bottom-left" src="/img/verticalstripe.svg" />
+        <img className="dash vertical-bottom-right" src="/img/verticalstripe.svg" />
+        <img className="dash horizontal-bottom-left" src="/img/horizontalstripe.svg" />
+        <img className="dash horizontal-bottom-right" src="/img/horizontalstripe.svg" />
       </div>
     </div>
     <section className="section section--gradient">
