@@ -5,14 +5,14 @@ gumroadlink: 'https://gum.co/uoBNR'
 presale: true
 price: 6
 date: 2019-05-15T15:24:04.927Z
-description: You know what’s up. Let other people know as well.
+description: The hype-est of all the croc charms
 featuredimage: /img/sup.png
 ---
-Composition:\
+_Composition:_\
 100% PVC
 
 * Croc Charm
 * 3D logo
 * Available for pre-order now!
 
-Product ID: 565826W1S889462
+_**Product ID:**_ 565826W1S889462
