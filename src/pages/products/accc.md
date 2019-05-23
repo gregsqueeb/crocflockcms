@@ -8,7 +8,7 @@ date: 2019-05-19T15:18:29.783Z
 description: You know what’s up. Let other people know as well.
 featuredimage: /img/full-croc.png
 ---
-Composition:\
+_Composition:_\
 100% PVC
 
 * Croc Charm
@@ -18,4 +18,4 @@ Composition:\
 * Designed In California
 * Wipe with a soft clean cloth
 
-Product ID: 827426W1S801006
+**_Product ID:_** 827426W1S801006
