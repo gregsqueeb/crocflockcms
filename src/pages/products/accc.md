@@ -1,6 +1,6 @@
 ---
 templateKey: product
-title: ACCC
+title: ACCC Charm
 gumroadlink: 'https://gum.co/YpPbd'
 presale: false
 price: 6
