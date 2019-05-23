@@ -25,9 +25,9 @@ export const ProductTemplate = ({
 
   let button;
   if (presale) {
-    button = <a className="button" href={gumroadlink}>Pre Order</a>
+    button = <a className="real-button" href={gumroadlink}>Pre Order</a>
   } else {
-    button = <a className="button" href={gumroadlink}>Buy Now</a>
+    button = <a className="real-button" href={gumroadlink}>Buy Now</a>
   } 
 
   const renderer = ({ minutes, seconds }) => {
@@ -39,9 +39,8 @@ export const ProductTemplate = ({
 
   return (
     <div>
-      <div className="main-product">
         {helmet || ''}
-        <div className="top-container">
+      <div className="top-container">
         <div className="product-image">
           <PreviewCompatibleImage
                       className="product-image"
@@ -52,18 +51,32 @@ export const ProductTemplate = ({
                         }`,
                       }}
                     />
-          </div>
-          <div className="product-overview">
-            <h1 className="product-name">{title}</h1>
-            <h2 className="product-price">${price}</h2>
-            <p className="product-description">{description}</p>
-            {button}
-            <p className="time-countdown"><span id="time"><Countdown zeroPadTime={2} date={Date.now() + (1000 * 60 * 5) } renderer={renderer} /></span> time left to buy</p>
-          </div>
         </div>
-        <div className="product-details">
-          <h3 className="details-header">product details</h3>
-          <PostContent content={content} />
+        <div className="product-deets">
+          <div className="product-overview">
+            <h1
+            className="shadow-text product-name"
+            style={{
+              color: 'black',
+              lineHeight: '55px',
+              fontSize: '40px',
+            }}
+          >
+              <span className="front-text">{title}</span>
+              <span className="rear-text">{title}</span>
+              {/* <Link className="button" to={link}>{buttontext}</Link> */}
+            </h1>
+            <div class="overview-details">
+              <p className="product-description">{description}</p>
+              <h2 className="product-price">${price}</h2>
+              {button}
+            </div>
+            {/* <p className="time-countdown"><span id="time"><Countdown zeroPadTime={2} date={Date.now() + (1000 * 60 * 5) } renderer={renderer} /></span> time left to buy</p> */}
+          </div>
+          <div className="product-details">
+            <h3 className="details-header">product details</h3>
+            <PostContent content={content} />
+          </div>
         </div>
       </div>
       <BlogRoll exclude={id}/>
@@ -103,12 +116,6 @@ const Product = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <script>
-              {/* Start the timer when they change the page */}
-              var fiveMinutes = 60 * 5,
-              display = document.querySelector('#time');
-              startTimer(fiveMinutes, display);
-            </script>
           </Helmet>
         }
         title={post.frontmatter.title}

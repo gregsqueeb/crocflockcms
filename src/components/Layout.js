@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
-        <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Cute+Font|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
         <script src="https://gumroad.com/js/gumroad.js" />
       </Helmet>
       <Navbar />

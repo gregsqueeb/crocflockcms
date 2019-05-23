@@ -37,9 +37,11 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <Link className="nav-item nav-link" to="/products">All Charms</Link>
-        <h1 className="logo nav-item"><Link to="/" title="Logo">CrocFlock</Link></h1>
-        <Link className="nav-item nav-link" to="/custom">Custom Charms</Link>
+        <h1 className="logo"><Link to="/" title="Logo">crocflock</Link></h1>
+        <div className="nav-links">
+          <Link className="nav-item nav-link" to="/products">All Charms</Link>
+          <Link className="nav-item nav-link" to="/custom">Custom Charms</Link>
+        </div>
       </nav>
     )
   }

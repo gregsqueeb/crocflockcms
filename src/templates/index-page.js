@@ -14,15 +14,10 @@ export const IndexPageTemplate = ({
   link,
   buttontext,
 }) => (
-  <div>
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'stretch',
-      }}>
+  <div className="container">
+    <div className="hero-container">
       <div
-        className="full-width-image margin-top-0"
+        className="full-width-image hero margin-top-0"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -30,51 +25,51 @@ export const IndexPageTemplate = ({
           backgroundPosition: `center center`,
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
-          height: `400px`,
           flex: '1',
         }}
       >
     </div>
-      <div
-        style={{
-          display: 'flex',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          justifyItems: 'center',
-          flexDirection: 'column',
-          flex: '1',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+      <div className="dashes-container">
+      <img className="dash vertical-top-left" src="/img/verticalstripe.svg" />
+      <img className="dash vertical-top-right" src="/img/verticalstripe.svg" />
+      <img className="dash horizontal-top-left" src="/img/horizontalstripe.svg" />
+      <img className="dash horizontal-top-right" src="/img/horizontalstripe.svg" />
+        <div
+          className="hero-text-container"
           style={{
-            color: 'black',
+            display: 'flex',
             lineHeight: '1',
-            padding: '24px',
-            fontSize: '80px',
-            marginBottom: '0',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            justifyItems: 'center',
+            flexDirection: 'column',
+            flex: '1',
+            position: 'relative',
           }}
         >
-          {title}
-          <Link className="button" to={link}>{buttontext}</Link>
-        </h1>
+        
+          <h1
+            className="shadow-text"
+            style={{
+              color: 'black',
+              lineHeight: '55px',
+              fontSize: '40px',
+            }}
+          >
+            <span className="front-text">{title}</span>
+            <span className="rear-text">{title}</span>
+            {/* <Link className="button" to={link}>{buttontext}</Link> */}
+          </h1>
+          
+        </div>
+        <img className="dash vertical-bottom-left" src="/img/verticalstripe.svg" />
+        <img className="dash vertical-bottom-right" src="/img/verticalstripe.svg" />
+        <img className="dash horizontal-bottom-left" src="/img/horizontalstripe.svg" />
+        <img className="dash horizontal-bottom-right" src="/img/horizontalstripe.svg" />
       </div>
     </div>
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="column is-12">
-                  <BlogRoll />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BlogRoll />
     </section>
   </div>
 )
