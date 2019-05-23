@@ -42,15 +42,15 @@ export const ProductTemplate = ({
         {helmet || ''}
       <div className="top-container">
         <div className="product-image">
-          <PreviewCompatibleImage
-                      className="product-image"
-                      imageInfo={{
-                        image: featuredimage,
-                        alt: `featured image thumbnail for post ${
-                          title
-                        }`,
-                      }}
-                    />
+          <div className="image-background" style={{
+            background: 'no-repeat center center',
+            backgroundImage: 'url(' + featuredimage.childImageSharp.fluid.src + ')',
+            backgroundSize: 'contain',
+            height: '100%',
+            width: '100%',
+          }}>
+
+          </div>
         </div>
         <div className="product-deets">
           <div className="product-overview">

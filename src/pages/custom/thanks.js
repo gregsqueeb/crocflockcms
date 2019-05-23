@@ -7,7 +7,7 @@ export default () => (
       <div className="container">
         <div className="content">
           <h1 className="all-charms-header">Thank you!</h1>
-          <p className="contact-form text-center">We will be in touch with you shortly. We look forward to you joining the crocflock!</p>
+          <p className="contact-form text-center">We will be in touch with you shortly. Welcome to the crocflock!</p>
         </div>
       </div>
     </section>

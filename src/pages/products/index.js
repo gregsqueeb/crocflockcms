@@ -7,7 +7,6 @@ export default class Products extends React.Component {
   render() {
     return (
       <Layout>
-        <h1 className="all-charms-header">All Charms</h1>
         <BlogRoll />
       </Layout>
     )

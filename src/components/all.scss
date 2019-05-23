@@ -3,7 +3,7 @@ h1, h2, h3 {
     margin: 0;
 }
 p, label {
-    font-size: 24px;
+    font-size: 16px;
 }
 .text-center {
     text-align: center;
@@ -301,7 +301,9 @@ p, label {
 }
 .all-charms-header {
     margin: 0;
-    font-size: 60px;
+    padding: 40px 0;
+    font-size: 20px;
+    font-style: italic;
     text-align: center;
     background: #F7F7F7;
 }
@@ -336,11 +338,38 @@ p, label {
 }
 .contact-form {
     background: #F7F7F7;
-    padding: 16px;
+    padding: 50px 16px;
     margin-top: 16px;
+    @media only screen and (min-width : 840px) {
+        padding: 50px;
+    }
+    label {
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 2px;
+    }
+    .control {
+        padding: 10px 0;
+    }
+    .field {
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="email"], textarea {
+        border: 1px solid black;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background: none;
+        border: 0;
+    }
 }
 .contact-form p {
     max-width: 600px;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 1px;
 }
 .contact-form form {
     max-width: 600px;
@@ -442,9 +471,6 @@ p, label {
     }
     body {
         margin: 0 20px 20px;
-    }
-    .all-charms-header {
-        font-size: 120px;
     }
 
 }
