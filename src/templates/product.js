@@ -90,6 +90,7 @@ ProductTemplate.propTypes = {
   description: PropTypes.string,
   gumroadlink: PropTypes.string,
   price: PropTypes.number,
+  presale: PropTypes.bool,
   featuredimage: PropTypes.object,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -107,6 +108,7 @@ const Product = ({ data }) => {
         description={post.frontmatter.description}
         gumroadlink={post.frontmatter.gumroadlink}
         price={post.frontmatter.price}
+        presale={post.frontmatter.presale}
         featuredimage={post.frontmatter.featuredimage}
         id={post.id}
         helmet={
@@ -143,6 +145,7 @@ export const pageQuery = graphql`
         description
         gumroadlink
         price
+        presale
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 360, quality: 100) {
