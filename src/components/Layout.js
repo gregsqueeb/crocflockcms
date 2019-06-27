@@ -47,7 +47,9 @@ const TemplateWrapper = ({ children }) => {
         <link href="https://fonts.googleapis.com/css?family=Cute+Font|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
         <script src="https://gumroad.com/js/gumroad.js" />
         <script>
-          amplitude.getInstance().logEvent('page_view');
+          $(document).ready(function() {
+            amplitude.getInstance().logEvent('page_view')
+          });
         </script>
       </Helmet>
       <Navbar />
