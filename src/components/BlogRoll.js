@@ -15,6 +15,14 @@ class BlogRoll extends React.Component {
     } else {
       products = allproducts
     }
+    function amplitudeTrack(e) {
+      console.log('The link was clicked.');
+      if (typeof window.amplitude === 'object') {
+        window.amplitude.getInstance().logEvent("button_click", {
+          href: window.location.pathname,
+        });
+      }
+    }
     return (
       <ul className="additional-products-list">
         {products &&
@@ -44,7 +52,7 @@ class BlogRoll extends React.Component {
             <div className="title-container">
                 <h2 className="addition-product-title">{product.frontmatter.title}</h2>
                 <h2 className="addition-product-price">${product.frontmatter.price}</h2>
-                <Link className="button" to={product.fields.slug}>Check it out</Link>
+                <Link className="button" onClick={amplitudeTrack} to={product.fields.slug}>Check it out</Link>
             </div>
           </li>
           ))}
