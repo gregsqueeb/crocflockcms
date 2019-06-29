@@ -66,7 +66,7 @@ export const ProductTemplate = ({
               <span className="rear-text">{title}</span>
               {/* <Link className="button" to={link}>{buttontext}</Link> */}
             </h1>
-            <div class="overview-details">
+            <div className="overview-details">
               <p className="product-description">{description}</p>
               <h2 className="product-price">${price}</h2>
               {button}
