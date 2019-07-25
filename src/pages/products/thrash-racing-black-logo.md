@@ -1,6 +1,6 @@
 ---
 templateKey: product
-title: Thrash Racing Black Logo
+title: Thrash Logo – Black
 gumroadlink: 'https://gum.co/IjHWL'
 presale: false
 price: 10
