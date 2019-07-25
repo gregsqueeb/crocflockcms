@@ -79,7 +79,7 @@ export default ({exclude}) => {
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "product" } } }
+          filter: { frontmatter: { templateKey: { eq: "product" }, published: { eq: true } } }
         ) {
           edges {
             node {
@@ -93,6 +93,7 @@ export default ({exclude}) => {
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 price
+                published
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {

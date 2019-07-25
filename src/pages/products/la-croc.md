@@ -3,6 +3,7 @@ templateKey: product
 title: La Croc
 gumroadlink: 'https://gum.co/bzUGN'
 presale: true
+published: true
 price: 6
 date: 2019-05-15T15:26:03.590Z
 description: The most bubbly of the croc charms

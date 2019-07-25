@@ -3,6 +3,7 @@ templateKey: product
 title: Onigiri Charm
 gumroadlink: 'https://gum.co/yOWaAt'
 presale: true
+published: true
 price: 6
 date: 2019-05-15T15:28:12.123Z
 description: A tasty treat that fills you with happiness

@@ -18,6 +18,7 @@ export const ProductTemplate = ({
   helmet,
   price,
   presale,
+  published,
   gumroadlink,
   id,
 }) => {
@@ -44,7 +45,7 @@ export const ProductTemplate = ({
         <div className="product-image">
           <div className="image-background" style={{
             background: 'no-repeat center center',
-            backgroundImage: 'url(' + featuredimage.childImageSharp.fluid.src + ')',
+            // backgroundImage: 'url(' + featuredimage.childImageSharp.fluid.src + ')',
             backgroundSize: 'contain',
             height: '100%',
             width: '100%',
@@ -91,6 +92,7 @@ ProductTemplate.propTypes = {
   gumroadlink: PropTypes.string,
   price: PropTypes.number,
   presale: PropTypes.bool,
+  published: PropTypes.bool,
   featuredimage: PropTypes.object,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -109,6 +111,7 @@ const Product = ({ data }) => {
         gumroadlink={post.frontmatter.gumroadlink}
         price={post.frontmatter.price}
         presale={post.frontmatter.presale}
+        published={post.frontmatter.published}
         featuredimage={post.frontmatter.featuredimage}
         id={post.id}
         helmet={
@@ -146,6 +149,7 @@ export const pageQuery = graphql`
         gumroadlink
         price
         presale
+        published
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 360, quality: 100) {

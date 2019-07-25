@@ -3,6 +3,7 @@ templateKey: product
 title: Sup CrocFlock
 gumroadlink: 'https://gum.co/uoBNR'
 presale: true
+published: true
 price: 6
 date: 2019-05-15T15:24:04.927Z
 description: The hype-est of all the croc charms
