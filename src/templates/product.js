@@ -45,7 +45,7 @@ export const ProductTemplate = ({
         <div className="product-image">
           <div className="image-background" style={{
             background: 'no-repeat center center',
-            // backgroundImage: 'url(' + featuredimage.childImageSharp.fluid.src + ')',
+            backgroundImage: 'url(' + featuredimage.childImageSharp.fluid.src + ')',
             backgroundSize: 'contain',
             height: '100%',
             width: '100%',
