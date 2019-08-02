@@ -5,7 +5,7 @@ gumroadlink: 'https://gum.co/FoFLO'
 presale: false
 price: 10
 date: 2019-07-25T05:02:42.092Z
-published: false
+published: true
 description: "A croc charm collab with Trash Racing! The pink logo variant. \U0001F994"
 featuredimage: /img/cutout.png
 ---
