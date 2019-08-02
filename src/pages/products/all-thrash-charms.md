@@ -3,7 +3,7 @@ templateKey: product
 title: All Thrash Charms
 gumroadlink: 'https://gum.co/lFIv'
 presale: false
-price: 40
+price: 38
 date: 2019-07-18T05:00:25.188Z
 published: true
 description: All 4 Thrash Charm in this release!
