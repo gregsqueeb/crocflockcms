@@ -11,6 +11,14 @@ const TemplateWrapper = ({ children }) => {
   const windowGlobal = typeof window !== 'undefined' && window;
 
   if(windowGlobal){
+    // Unsub, and then sub again so that we don't create a ton of subscriptions which end up doubling up on analytics events
+    windowGlobal.Snipcart.unsubscribe('item.adding');
+    windowGlobal.Snipcart.unsubscribe('cart.opened');
+    windowGlobal.Snipcart.unsubscribe('cart.closed');
+    windowGlobal.Snipcart.unsubscribe('order.completed');
+    windowGlobal.Snipcart.unsubscribe('billingaddress.changed');
+    windowGlobal.Snipcart.unsubscribe('shippingaddress.changed');
+
     windowGlobal.Snipcart.subscribe('item.adding', function (ev, item, items) {
       if (typeof windowGlobal.amplitude === 'object') {
         windowGlobal.amplitude.getInstance().logEvent("item_added", {
