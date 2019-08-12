@@ -16,7 +16,6 @@ class BlogRoll extends React.Component {
       products = allproducts
     }
     function amplitudeTrack(e) {
-      console.log('The link was clicked.');
       if (typeof window.amplitude === 'object') {
         window.amplitude.getInstance().logEvent("button_click", {
           href: window.location.pathname,

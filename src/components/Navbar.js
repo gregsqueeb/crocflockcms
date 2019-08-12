@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
           <Link className="nav-item nav-link" to="/products">All Charms</Link>
           <Link className="nav-item nav-link" to="/custom">Custom Charms</Link>
         </div>
-        <a href="#" class="snipcart-checkout">
+        <a href="#" className="snipcart-checkout">
           <img src="/img/cart.svg" />
         </a>
       </nav>
