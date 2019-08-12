@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children }) => {
     if (typeof window.amplitude === 'object') {
       window.amplitude.getInstance().logEvent("item_added", {
         href: window.location.pathname,
-        item: item,
+        item: item, 
       });
     }
   });
