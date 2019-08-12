@@ -69,6 +69,7 @@ export const ProductTemplate = ({
                   data-item-name={title}
                   data-item-price={price}
                   data-item-weight="3"
+                  data-item-image={"https://crocflock.com"+featuredimage.childImageSharp.fluid.src}
                   data-item-url="http://crocflock.com"
                   data-item-description={content}>
                       Buy Now
