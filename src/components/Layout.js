@@ -8,6 +8,76 @@ import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
+  const windowGlobal = typeof window !== 'undefined' && window;
+
+  if(windowGlobal){
+    // Unsub, and then sub again so that we don't create a ton of subscriptions which end up doubling up on analytics events
+    windowGlobal.Snipcart.unsubscribe('item.adding');
+    windowGlobal.Snipcart.unsubscribe('cart.opened');
+    windowGlobal.Snipcart.unsubscribe('cart.closed');
+    windowGlobal.Snipcart.unsubscribe('order.completed');
+    windowGlobal.Snipcart.unsubscribe('billingaddress.changed');
+    windowGlobal.Snipcart.unsubscribe('shippingaddress.changed');
+
+    windowGlobal.Snipcart.subscribe('item.adding', function (ev, item, items) {
+      if (typeof windowGlobal.amplitude === 'object') {
+        windowGlobal.amplitude.getInstance().logEvent("item_added", {
+          href: windowGlobal.location.pathname,
+          item: item, 
+        });
+      }
+    });
+
+    windowGlobal.Snipcart.subscribe('cart.opened', function(e) {
+      if (typeof windowGlobal.amplitude === 'object') {
+        windowGlobal.amplitude.getInstance().logEvent("cart_open", {
+          href: windowGlobal.location.pathname,
+        });
+      }
+      console.log('Snipcart popup is visible');
+    });
+
+    windowGlobal.Snipcart.subscribe('cart.closed', function() {
+
+      if (typeof windowGlobal.amplitude === 'object') {
+        windowGlobal.amplitude.getInstance().logEvent("cart_close", {
+          href: windowGlobal.location.pathname,
+        });
+      }
+
+      console.log('Snipcart popup has been closed');
+    });
+
+    windowGlobal.Snipcart.subscribe('order.completed', function (data) {
+
+      windowGlobal.amplitude.getInstance().logEvent("purchase", {
+        order_info: data,
+      });
+      windowGlobal.amplitude.getInstance().setUserId(data.email);
+      windowGlobal.amplitude.getInstance().Identify().add('num_orders', 1).add('ltv',data.total)
+
+      console.log(data);
+    });
+
+    windowGlobal.Snipcart.subscribe('billingaddress.changed', function (address) {
+      windowGlobal.amplitude.getInstance().logEvent("billing_address", {
+        data: address,
+      });
+      windowGlobal.amplitude.getInstance().setUserId(address.email);
+
+      console.log(address);
+    })
+
+    windowGlobal.Snipcart.subscribe('shippingaddress.changed', function (address) {
+      windowGlobal.amplitude.getInstance().logEvent("shipping_address", {
+        data: address,
+      });
+      windowGlobal.amplitude.getInstance().setUserId(address.email);
+
+      console.log(address);
+    })
+  }
+  
   return (
     <div>
       <Helmet>

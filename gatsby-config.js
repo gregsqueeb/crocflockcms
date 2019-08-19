@@ -18,6 +18,13 @@ module.exports = {
       },
     },
     {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+        apiKey: 'YzI5YzE3ZWItZDgxMy00ZjA0LTgwNTMtYWNlNDJjYTYyNmJhNjM3MDAzNTM0ODQ5MDc1NjU0',
+        autopop: true,
+			}
+		},
+    {
       resolve: `gatsby-plugin-amplitude-analytics`,
       options: {
         // Specify the API key for your Amplitude Project (required)

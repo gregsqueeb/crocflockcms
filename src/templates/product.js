@@ -24,13 +24,6 @@ export const ProductTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  let button;
-  if (presale) {
-    button = <a className="real-button" href={gumroadlink}>Pre Order</a>
-  } else {
-    button = <a className="real-button" href={gumroadlink}>Buy Now</a>
-  } 
-
   const renderer = ({ minutes, seconds }) => {
       if(seconds < 10){
         seconds = "0"+seconds
@@ -70,7 +63,17 @@ export const ProductTemplate = ({
             <div className="overview-details">
               <p className="product-description">{description}</p>
               <h2 className="product-price">${price}</h2>
-              {button}
+              <button
+                  className="snipcart-add-item real-button"
+                  data-item-id="2"
+                  data-item-name={title}
+                  data-item-price={price}
+                  data-item-weight="3"
+                  data-item-image={"https://crocflock.com"+featuredimage.childImageSharp.fluid.src}
+                  data-item-url="http://crocflock.com"
+                  data-item-description={content}>
+                      Buy Now
+              </button>
             </div>
             {/* <p className="time-countdown"><span id="time"><Countdown zeroPadTime={2} date={Date.now() + (1000 * 60 * 5) } renderer={renderer} /></span> time left to buy</p> */}
           </div>

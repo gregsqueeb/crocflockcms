@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="21px" viewBox="0 0 26 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cart-Button-Copy-2" transform="translate(-12.000000, -15.000000)" fill="#FFFFFF">
+            <g id="Icon" transform="translate(12.000000, 15.000000)">
+                <path d="M4.39892179,2 L4.9115482,4.06411059 C4.91933949,4.18725091 4.94941787,4.30433877 4.99779471,4.41138561 L7.43900859,14.2410302 C7.54974898,14.6869307 7.95008008,15 8.40952621,15 L21.4095262,15 C21.8511344,15 22.2404573,14.7103318 22.3673525,14.2873479 L25.3673525,4.28734789 C25.5598361,3.64573596 25.0793887,3 24.4095262,3 L6.70802998,3 L6.1514652,0.758969812 C6.04072481,0.313069251 5.64039371,0 5.18094758,0 L1,0 C0.44771525,0 0,0.44771525 0,1 C0,1.55228475 0.44771525,2 1,2 L4.39892179,2 Z M7.20473439,5 L23.0654956,5 L20.6654956,13 L9.191552,13 L7.20473439,5 Z" id="Line" fill-rule="nonzero"></path>
+                <circle id="Oval" cx="9.90952621" cy="19" r="2"></circle>
+                <circle id="Oval-Copy" cx="19.9095262" cy="19" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
