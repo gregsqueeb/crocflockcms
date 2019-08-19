@@ -65,7 +65,7 @@ export const ProductTemplate = ({
               <h2 className="product-price">${price}</h2>
               <button
                   className="snipcart-add-item real-button"
-                  data-item-id="2"
+                  data-item-id={id}
                   data-item-name={title}
                   data-item-price={price}
                   data-item-weight="3"
