@@ -7,7 +7,7 @@ price: 10
 date: 2019-07-25T05:02:42.092Z
 published: true
 description: "A croc charm collab with Trash Racing! The pink logo variant. \U0001F994"
-featuredimage: /img/cutout.png
+featuredimage: /img/pinklogo.png
 ---
 _Composition:_\
 100% PVC
