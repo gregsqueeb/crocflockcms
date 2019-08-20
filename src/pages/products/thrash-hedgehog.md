@@ -7,7 +7,7 @@ price: 10
 date: 2019-07-25T05:03:25.903Z
 published: true
 description: "A croc charm collab with Trash Racing! The hedgehog variant. \U0001F994"
-featuredimage: /img/dsc05085cutout.png
+featuredimage: /img/hedge.png
 ---
 _Composition:_\
 100% PVC
