@@ -7,7 +7,7 @@ price: 38
 date: 2019-08-03T05:00:25.188Z
 published: true
 description: All 4 Thrash Charm in this release!
-featuredimage: /img/67099325_427672744503432_4179783995472478208_n.jpg
+featuredimage: /img/allsmall.jpg
 ---
 _Composition:_\
 100% PVC
