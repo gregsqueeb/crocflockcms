@@ -7,7 +7,7 @@ price: 10
 date: 2019-07-25T04:51:28.862Z
 published: true
 description: "A croc charm collab with Trash Racing! The love variant. \U0001F994"
-featuredimage: /img/dsc05083cutout.png
+featuredimage: /img/heart.png
 ---
 _Composition:_\
 100% PVC
