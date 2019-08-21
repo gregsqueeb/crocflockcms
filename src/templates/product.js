@@ -23,17 +23,13 @@ export const ProductTemplate = ({
   id,
 }) => {
   const PostContent = contentComponent || Content
-
+  const windowGlobal = typeof window !== 'undefined' && window;
   const renderer = ({ minutes, seconds }) => {
       if(seconds < 10){
         seconds = "0"+seconds
       }
       return <span>{minutes}:{seconds}</span>;
   };
-  let pageUrl= ""
-  if(windowGlobal){
-    pageUrl = 
-  }
   return (
     <div>
         {helmet || ''}
