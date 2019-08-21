@@ -60,11 +60,10 @@ const TemplateWrapper = ({ children }) => {
     });
 
     windowGlobal.Snipcart.subscribe('billingaddress.changed', function (address) {
+      windowGlobal.amplitude.getInstance().setUserId(address.email);
       windowGlobal.amplitude.getInstance().logEvent("billing_address", {
         data: address,
       });
-      windowGlobal.amplitude.getInstance().setUserId(address.email);
-      windowGlobal.amplitude.getInstance().Identify()
       console.log(address);
     })
 
