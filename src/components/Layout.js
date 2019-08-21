@@ -64,7 +64,7 @@ const TemplateWrapper = ({ children }) => {
         data: address,
       });
       windowGlobal.amplitude.getInstance().setUserId(address.email);
-
+      windowGlobal.amplitude.getInstance().Identify()
       console.log(address);
     })
 

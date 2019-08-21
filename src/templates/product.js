@@ -30,7 +30,10 @@ export const ProductTemplate = ({
       }
       return <span>{minutes}:{seconds}</span>;
   };
-
+  let pageUrl= ""
+  if(windowGlobal){
+    pageUrl = 
+  }
   return (
     <div>
         {helmet || ''}
@@ -70,7 +73,7 @@ export const ProductTemplate = ({
                   data-item-price={price}
                   data-item-weight="3"
                   data-item-image={"https://crocflock.com"+featuredimage.childImageSharp.fluid.src}
-                  data-item-url={window.location.href}
+                  data-item-url={windowGlobal ? window.location.href : ""}
                   data-item-description={content}>
                       Buy Now
               </button>
