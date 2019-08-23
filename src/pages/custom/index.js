@@ -54,7 +54,7 @@ export default class Index extends React.Component {
                 <div className="PuffinSnippet">
                   <p>We can collaborate with you to create your own custom croc charm. We specialize in everything from designing the charm, to managing the shipping/logistics. We have a couple additional services like creating custom backs for your croc charms to set you apart from others out there.</p>
                 </div>
-                <script>PuffinSnippet.create('contact-form-step-2')</script>
+                <script dangerouslySetInnerHTML={{__html: `PuffinSnippet.create('contact-form-step-2')`}}/>
 
 
 
