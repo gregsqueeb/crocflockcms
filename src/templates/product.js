@@ -70,7 +70,7 @@ export const ProductTemplate = ({
                   data-item-weight="3"
                   data-item-image={"https://crocflock.com"+featuredimage.childImageSharp.fluid.src}
                   data-item-url={windowGlobal ? window.location.href : ""}
-                  data-item-description={content}>
+                  data-item-description={content.replace(/<\/?[^>]+(>|$)/g, "")}>
                       Buy Now
               </button>
             </div>

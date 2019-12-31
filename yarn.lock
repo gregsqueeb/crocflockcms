@@ -833,6 +833,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.4.4", "@babel/runtime@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.0.0 <7.4.0":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.2.2.tgz#005b3fdf0ed96e88041330379e0da9a708eb2907"
@@ -5579,6 +5586,15 @@ fuzzy@^0.1.1:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
+gatsby-background-image@^0.6.1:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.6.2.tgz#d629df4154a4410d782769feedd1273fab7345bc"
+  integrity sha512-QBU5yR7VF/5/+p8tXrO9eRq42UBrvTHOqajRNkwSFo5LK3+bckVa11Fvfrvr4ADk0L8xOoNLwWWffEU5PtQb9A==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    global "^4.3.2"
+    prop-types "^15.7.2"
+
 gatsby-cli@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.5.4.tgz#d11a00f61227a6db7965e71ac93e142d73b25587"
@@ -5626,6 +5642,20 @@ gatsby-link@^2.0.16:
     "@babel/runtime" "^7.0.0"
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
+
+gatsby-plugin-amplitude-analytics@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-amplitude-analytics/-/gatsby-plugin-amplitude-analytics-1.5.0.tgz#868a1a410187bcb92e4ca943569b45a4fbea9f78"
+  integrity sha512-dhE5MNs10O7LLai4ShafvaHTMcLBOYjJm3qQPrkNT6KyX7WXpWy3OBzLtArZmdAe6M2SZCYA6tcAj3ORM7hCeg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+gatsby-plugin-google-tagmanager@^2.0.13:
+  version "2.1.15"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.1.15.tgz#341d088371472a7e67a4d172d960f382feebb5d1"
+  integrity sha512-bDuMz+QnV6dcGpjBf1wPzLHEvVh8VMXi2rcr2f4MucYVf6KbU8LS9LQir3NVj/bHam47wiE28jjV/4tf0EI4mQ==
+  dependencies:
+    "@babel/runtime" "^7.6.3"
 
 gatsby-plugin-netlify-cms@^4.0.0:
   version "4.0.0"
@@ -5710,6 +5740,11 @@ gatsby-plugin-sharp@^2.0.15:
     progress "^1.1.8"
     sharp "^0.21.3"
     svgo "^1.2.0"
+
+gatsby-plugin-snipcart@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcart/-/gatsby-plugin-snipcart-1.1.2.tgz#ac2e672ae4fec200ecfce81f267e6e95040131a5"
+  integrity sha512-p3qpYVbedxqxWUJ42qhZKF9dbmGwi0mHvUZZ53/FcNoFrp3AeWFah86+YWkgPuERlliQBRUuZoW1gNV13ONnlA==
 
 gatsby-react-router-scroll@^2.0.7:
   version "2.0.7"
@@ -6130,6 +6165,14 @@ global@^4.3.0, global@~4.3.0:
   dependencies:
     min-document "^2.19.0"
     process "~0.5.1"
+
+global@^4.3.2:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+  integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
+  dependencies:
+    min-document "^2.19.0"
+    process "^0.11.10"
 
 globals@^11.1.0, globals@^11.7.0:
   version "11.11.0"
@@ -8188,6 +8231,11 @@ lodash.has@^4.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
   integrity sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
@@ -11157,6 +11205,14 @@ react-aria-menubutton@^6.0.0:
     focus-group "^0.3.1"
     prop-types "^15.6.0"
     teeny-tap "^0.2.0"
+
+react-countdown-now@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-countdown-now/-/react-countdown-now-2.1.1.tgz#88901eb776907338da137effbf7cdbec5b9274c6"
+  integrity sha512-DGSd/EGzigIsixQNzPQbk376zG49IVAyMCUkMgDEuIXlIRKQwB44Fg8uA3zrZ+aQVAuzsyb6fJWskPxIP56DYg==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.7.2"
 
 react-datetime@^2.16.3:
   version "2.16.3"

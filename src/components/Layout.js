@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   const windowGlobal = typeof window !== 'undefined' && window;
 
-  if(windowGlobal){
+  if(typeof windowGlobal !== 'undefined' && typeof windowGlobal.Snipcart !== 'undefined' && typeof windowGlobal.Snipcart.unsubscribe !== 'undefined'){
     // Unsub, and then sub again so that we don't create a ton of subscriptions which end up doubling up on analytics events
     windowGlobal.Snipcart.unsubscribe('item.adding');
     windowGlobal.Snipcart.unsubscribe('cart.opened');
@@ -84,15 +84,6 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
 
-
-
-
-        <script src="//puffin.io/api/v1/client/f29ce987edebd9b73836f599881fda87/bundle.js"></script>
-
-
-
-
-        
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -123,7 +114,6 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
         <link href="https://fonts.googleapis.com/css?family=Cute+Font|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
-        <script src="https://gumroad.com/js/gumroad.js" />
       </Helmet>
       <Navbar />
       <div>{children}</div>

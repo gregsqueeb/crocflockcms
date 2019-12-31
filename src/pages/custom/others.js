@@ -51,7 +51,7 @@ export default class Index extends React.Component {
               >
 
 
-
+                {/* PUFFIN SNIPPET */}
                 <div className="PuffinSnippet">
                   <p>Let's start the process</p>
                 </div>

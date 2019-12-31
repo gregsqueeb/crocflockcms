@@ -50,11 +50,15 @@ export default class Index extends React.Component {
                 onSubmit={this.handleSubmit}
               >
 
-              
+
+
+                {/* PUFFIN SNIPPET */}
                 <div className="PuffinSnippet">
                   <p>We can collaborate with you to create your own custom croc charm. We specialize in everything from designing the charm, to managing the shipping/logistics. We have a couple additional services like creating custom backs for your croc charms to set you apart from others out there.</p>
                 </div>
                 <script dangerouslySetInnerHTML={{__html: `PuffinSnippet.create('contact-form-step-2')`}}/>
+
+
 
 
 

@@ -22,6 +22,8 @@ module.exports = {
 			options: {
         apiKey: 'YzI5YzE3ZWItZDgxMy00ZjA0LTgwNTMtYWNlNDJjYTYyNmJhNjM3MDAzNTM0ODQ5MDc1NjU0',
         autopop: true,
+        js: 'https://cdn.snipcart.com/themes/v3.0.1/default/snipcart.js',
+        styles: 'https://cdn.snipcart.com/themes/v3.0.0/default/snipcart.css',
 			}
 		},
     {
