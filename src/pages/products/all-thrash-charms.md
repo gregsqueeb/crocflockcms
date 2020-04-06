@@ -5,7 +5,7 @@ gumroadlink: 'https://gum.co/lFIv'
 presale: false
 price: 38
 date: 2019-08-03T05:00:25.188Z
-published: true
+published: false
 description: All 4 Thrash Charm in this release!
 featuredimage: /img/allsmall.jpg
 ---
