@@ -3,9 +3,9 @@ templateKey: product
 title: ACCC Charm
 gumroadlink: 'https://gum.co/YpPbd'
 presale: false
-price: 6
+price: 10
 date: 2019-05-19T15:18:29.783Z
-published: false
+published: true
 description: A croc charm to truly express how you feel about crocs.
 featuredimage: /img/full-croc.png
 ---
